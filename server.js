@@ -8,6 +8,6 @@ app.get('/home', function (req,res) {
     res.sendFile(path.join(__dirname, 'public' , 'index.html'));
 });
 
-app.listen('3000', function () {
+app.listen(process.env.PORT || '3000', function () {
     console.log(path.join(__dirname, 'public' , 'index.html')+'on port 3000');
 });
